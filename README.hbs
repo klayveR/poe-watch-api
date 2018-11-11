@@ -1,0 +1,55 @@
+# poewatch-api
+[![NPM version](https://img.shields.io/npm/v/poewatch-api.svg)](https://www.npmjs.com/package/poewatch-api)
+[![NPM Downloads](https://img.shields.io/npm/dt/poewatch-api.svg)](https://www.npmjs.com/package/poewatch-api)
+[![NPM License](https://img.shields.io/npm/l/poewatch-api.svg)](https://www.npmjs.com/package/poewatch-api)
+
+## Getting Started
+**Install with npm:**
+```bash
+$ npm install poewatch-api
+```
+
+**Example usage:**
+
+Before you can do something with data from the API, `categories`, `leagues` and `itemdata` must be updated.  This happens automatically once you create a new [<code>PoeWatch</code>](#PoeWatch) object unless you set `autoUpdate` to `false`. If you want to start doing things as soon as possible you should consider using the [<code>ready</code>](#PoeWatch+ready) event, which is emitted once the above data has been updated.
+
+```javascript
+const PoeWatch = require("poewatch-api");
+
+let poeWatch = new PoeWatch();
+
+poeWatch.on("ready", () => {
+  // Request data for a 6-linked relic Shavronne's Wrappings
+  poeWatch.requestItem({name: "Shavronne's Wrappings", links: 6, relic: true})
+  .then((item) => {
+    // Get the sparkline of the median value of the last week in Standard league
+    let medianSparkline = item.getPriceDataByLeague("Standard").getHistory().getSparkline("median", 7);
+    console.log("Median value history of last week: " + medianSparkline.toString());
+  })
+  .catch((error) => {
+    console.error("An error occurred", error);
+  });
+});
+```
+
+You can also update the data yourself by setting `autoUpdate` to `false` and using the [<code>.update()</code>](#PoeWatch+update) method.
+
+```javascript
+let poeWatch = new PoeWatch({autoUpdate: false});
+
+poeWatch.update()
+.then(() => {
+  return poeWatch.requestItem({name: "Exalted Orb"});
+})
+.then((item) => {
+  let meanValue = item.getPriceDataByLeague("Standard").getMean();
+  console.log("Exalted Orbs are currently worth " + meanValue + " Chaos Orbs in Standard league");
+})
+.catch((error) => {
+  console.error("An error occurred", error);
+});
+```
+
+Alternatively you can create a [<code>PoeWatch</code>](#PoeWatch) object and make sure it's ready with the [<code>.isReady()</code>](#PoeWatch+isReady) method if you need the API at a later time.
+
+{{>main}}
