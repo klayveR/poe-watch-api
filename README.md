@@ -1,12 +1,17 @@
-# poewatch-api
-[![NPM version](https://img.shields.io/npm/v/poewatch-api.svg)](https://www.npmjs.com/package/poewatch-api)
-[![NPM Downloads](https://img.shields.io/npm/dt/poewatch-api.svg)](https://www.npmjs.com/package/poewatch-api)
-[![NPM License](https://img.shields.io/npm/l/poewatch-api.svg)](https://www.npmjs.com/package/poewatch-api)
+# poe-watch-api
+[![NPM version](https://img.shields.io/npm/v/poe-watch-api.svg)](https://www.npmjs.com/package/poe-watch-api)
+[![NPM Downloads](https://img.shields.io/npm/dt/poe-watch-api.svg)](https://www.npmjs.com/package/poe-watch-api)
+[![NPM License](https://img.shields.io/npm/l/poe-watch-api.svg)](https://www.npmjs.com/package/poe-watch-api)
 
 ## Getting Started
 **Install with npm:**
 ```bash
-$ npm install poewatch-api
+$ npm install poe-watch-api
+```
+
+**Integration:**
+```javascript
+const PoeWatch = require("poe-watch-api");
 ```
 
 **Example usage:**
@@ -14,8 +19,6 @@ $ npm install poewatch-api
 Before you can do something with data from the API, `categories`, `leagues` and `itemdata` must be updated.  This happens automatically once you create a new [<code>PoeWatch</code>](#PoeWatch) object unless you set `autoUpdate` to `false`. If you want to start doing things as soon as possible you should consider using the [<code>ready</code>](#PoeWatch+event_ready) event, which is emitted once the above data has been updated.
 
 ```javascript
-const PoeWatch = require("poewatch-api");
-
 let poeWatch = new PoeWatch();
 
 poeWatch.on("ready", () => {
