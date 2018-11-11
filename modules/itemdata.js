@@ -126,7 +126,7 @@ class ItemData {
   /**
   * Returns the category group of the item
   *
-  * @returns {group}
+  * @returns {string}
   */
   getGroup() {
     return this.group;
