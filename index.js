@@ -220,7 +220,7 @@ class PoeWatch extends EventEmitter {
   * @param   {string}    [properties.icon] Icon URL
   * @param   {string}    [properties.category] Item category
   * @param   {string}    [properties.group] Item category group
-  * @returns {Promise<ItemData>}
+  * @returns {ItemData}
   */
   getItemData(properties) {
     if(this.hasItemData() && typeof properties === "object" && Object.keys(properties).length > 0) {

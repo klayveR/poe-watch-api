@@ -81,7 +81,7 @@ Alternatively you can create a [<code>PoeWatch</code>](#PoeWatch) object and mak
     * [.requestItemdata()](#PoeWatch+requestItemdata) ⇒ <code>Promise.&lt;Object&gt;</code>
     * [.requestCategories()](#PoeWatch+requestCategories) ⇒ <code>Promise.&lt;Object&gt;</code>
     * [.requestItem(properties)](#PoeWatch+requestItem) ⇒ [<code>Promise.&lt;Item&gt;</code>](#Item)
-    * [.getItemData(properties)](#PoeWatch+getItemData) ⇒ [<code>Promise.&lt;ItemData&gt;</code>](#ItemData)
+    * [.getItemData(properties)](#PoeWatch+getItemData) ⇒ [<code>ItemData</code>](#ItemData)
     * [.getLeague(properties)](#PoeWatch+getLeague) ⇒ [<code>League</code>](#League)
     * [.isUpdating()](#PoeWatch+isUpdating) ⇒ <code>boolean</code>
     * [.isReady()](#PoeWatch+isReady) ⇒ <code>boolean</code>
@@ -154,7 +154,7 @@ Item data must be requested with [.requestItemdata()](#PoeWatch+requestItemdata)
 
 <a name="PoeWatch+getItemData"></a>
 
-### poeWatch.getItemData(properties) ⇒ [<code>Promise.&lt;ItemData&gt;</code>](#ItemData)
+### poeWatch.getItemData(properties) ⇒ [<code>ItemData</code>](#ItemData)
 Returns item data for a specific item
 
 Item data must be requested with [.requestItemdata()](#PoeWatch+requestItemdata) or [.update()](#PoeWatch+update) before using this method
