@@ -11,7 +11,7 @@ $ npm install poewatch-api
 
 **Example usage:**
 
-Before you can do something with data from the API, `categories`, `leagues` and `itemdata` must be updated.  This happens automatically once you create a new [<code>PoeWatch</code>](#PoeWatch) object unless you set `autoUpdate` to `false`. If you want to start doing things as soon as possible you should consider using the [<code>ready</code>](#PoeWatch+ready) event, which is emitted once the above data has been updated.
+Before you can do something with data from the API, `categories`, `leagues` and `itemdata` must be updated.  This happens automatically once you create a new [<code>PoeWatch</code>](#PoeWatch) object unless you set `autoUpdate` to `false`. If you want to start doing things as soon as possible you should consider using the [<code>ready</code>](#PoeWatch+event_ready) event, which is emitted once the above data has been updated.
 
 ```javascript
 const PoeWatch = require("poewatch-api");
@@ -293,7 +293,7 @@ Returns a sparkline, optionally only of the last `count` entries (days) in an ar
     * [.getItemLevel()](#ItemData+getItemLevel) ⇒ <code>number</code>
     * [.getIcon()](#ItemData+getIcon) ⇒ <code>string</code>
     * [.getCategory()](#ItemData+getCategory) ⇒ <code>string</code>
-    * [.getGroup()](#ItemData+getGroup) ⇒ <code>group</code>
+    * [.getGroup()](#ItemData+getGroup) ⇒ <code>string</code>
 
 <a name="Item+getVariation"></a>
 
@@ -396,7 +396,7 @@ Returns the category of the item
 **Kind**: instance method of [<code>Item</code>](#Item)  
 <a name="ItemData+getGroup"></a>
 
-### item.getGroup() ⇒ <code>group</code>
+### item.getGroup() ⇒ <code>string</code>
 Returns the category group of the item
 
 **Kind**: instance method of [<code>Item</code>](#Item)  
@@ -419,7 +419,7 @@ Returns the category group of the item
     * [.getVariation()](#ItemData+getVariation) ⇒ <code>string</code>
     * [.getIcon()](#ItemData+getIcon) ⇒ <code>string</code>
     * [.getCategory()](#ItemData+getCategory) ⇒ <code>string</code>
-    * [.getGroup()](#ItemData+getGroup) ⇒ <code>group</code>
+    * [.getGroup()](#ItemData+getGroup) ⇒ <code>string</code>
 
 <a name="ItemData+getId"></a>
 
@@ -501,7 +501,7 @@ Returns the category of the item
 **Kind**: instance method of [<code>ItemData</code>](#ItemData)  
 <a name="ItemData+getGroup"></a>
 
-### itemData.getGroup() ⇒ <code>group</code>
+### itemData.getGroup() ⇒ <code>string</code>
 Returns the category group of the item
 
 **Kind**: instance method of [<code>ItemData</code>](#ItemData)  

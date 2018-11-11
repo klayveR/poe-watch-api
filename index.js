@@ -12,11 +12,11 @@ const API = {
   categories: "https://api.poe.watch/categories",
   leagues: "https://api.poe.watch/leagues",
   item: "https://api.poe.watch/item",
-}
+};
 
 const DEFAULT_OPTIONS = {
   autoUpdate: true
-}
+};
 
 const limiter = new Bottleneck({
   maxConcurrent: 5,
@@ -52,7 +52,7 @@ class PoeWatch extends EventEmitter {
         * @type {Object}
         */
         this.emit("error", error);
-      })
+      });
     }
   }
 
@@ -180,7 +180,7 @@ class PoeWatch extends EventEmitter {
 
     return new Promise(function(resolve, reject) {
       if(!self.isReady()) {
-        return reject(new Error("API data is not updated"))
+        return reject(new Error("API data is not updated"));
       }
 
       if(!itemData) {
