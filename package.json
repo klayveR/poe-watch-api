@@ -1,5 +1,5 @@
 {
-  "name": "poewatch-api",
+  "name": "poe-watch-api",
   "version": "0.1.0",
   "description": "NodeJS module to quickly and easily interact with the poe.watch API",
   "main": "index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/klayveR/poewatch-api.git"
+    "url": "git+https://github.com/klayveR/poe-watch-api.git"
   },
   "author": {
     "name": "Tobias Hoffmann",
@@ -23,9 +23,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/klayveR/poewatch-api/issues"
+    "url": "https://github.com/klayveR/poe-watch-api/issues"
   },
-  "homepage": "https://github.com/klayveR/poewatch-api#readme",
+  "homepage": "https://github.com/klayveR/poe-watch-api#readme",
   "dependencies": {
     "bottleneck": "^2.13.0",
     "request": "^2.88.0",
