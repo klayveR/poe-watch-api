@@ -153,7 +153,8 @@ class PoeWatch extends EventEmitter {
 
   /**
   * Returns item data including price data for a specific item
-  * Item data must be requested with [.requestItemdata()](#PoeWatch+requestItemdata) before using this method
+  *
+  * Item data must be requested with [.requestItemdata()](#PoeWatch+requestItemdata) or [.update()](#PoeWatch+update) before using this method
   *
   * @param   {Object}    properties An object containing one or more properties of the item
   * @param   {number}    [properties.id] poe.watch ID of the item
@@ -200,6 +201,7 @@ class PoeWatch extends EventEmitter {
 
   /**
   * Returns item data for a specific item
+  *
   * Item data must be requested with [.requestItemdata()](#PoeWatch+requestItemdata) or [.update()](#PoeWatch+update) before using this method
   *
   * @param   {Object}    properties An object containing one or more properties of the item
@@ -239,7 +241,9 @@ class PoeWatch extends EventEmitter {
 
   /**
   * Returns league data for a specific league
+  *
   * League data must be requested with [.requestLeagues()](#PoeWatch+requestLeagues) or [.update()](#PoeWatch+update) before using this method
+  *
   * Only the most useful properties are listed below. You can use any property of a league from the poe.watch API though, please refer to the API structure [here](https://api.poe.watch/leagues)
   *
   * @param   {Object}    properties An object containing one or more properties of the league

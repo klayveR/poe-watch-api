@@ -128,7 +128,8 @@ Requests category data from poe.watch
 
 ### poeWatch.requestItem(properties) ⇒ [<code>Item</code>](#Item)
 Returns item data including price data for a specific item
-Item data must be requested with [.requestItemdata()](#PoeWatch+requestItemdata) before using this method
+
+Item data must be requested with [.requestItemdata()](#PoeWatch+requestItemdata) or [.update()](#PoeWatch+update) before using this method
 
 **Kind**: instance method of [<code>PoeWatch</code>](#PoeWatch)  
 
@@ -155,6 +156,7 @@ Item data must be requested with [.requestItemdata()](#PoeWatch+requestItemdata)
 
 ### poeWatch.getItemData(properties) ⇒ [<code>ItemData</code>](#ItemData)
 Returns item data for a specific item
+
 Item data must be requested with [.requestItemdata()](#PoeWatch+requestItemdata) or [.update()](#PoeWatch+update) before using this method
 
 **Kind**: instance method of [<code>PoeWatch</code>](#PoeWatch)  
@@ -182,7 +184,9 @@ Item data must be requested with [.requestItemdata()](#PoeWatch+requestItemdata)
 
 ### poeWatch.getLeague(properties) ⇒ [<code>League</code>](#League)
 Returns league data for a specific league
+
 League data must be requested with [.requestLeagues()](#PoeWatch+requestLeagues) or [.update()](#PoeWatch+update) before using this method
+
 Only the most useful properties are listed below. You can use any property of a league from the poe.watch API though, please refer to the API structure [here](https://api.poe.watch/leagues)
 
 **Kind**: instance method of [<code>PoeWatch</code>](#PoeWatch)  
