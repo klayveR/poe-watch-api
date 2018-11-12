@@ -1,6 +1,6 @@
 {
   "name": "poe-watch-api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "NodeJS module to quickly and easily interact with the poe.watch API",
   "main": "index.js",
   "keywords": [
