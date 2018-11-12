@@ -281,7 +281,6 @@ Returns a sparkline, optionally only of the last `count` entries (days) in an ar
 **Extends**: [<code>ItemData</code>](#ItemData)  
 
 * [Item](#Item) ⇐ [<code>ItemData</code>](#ItemData)
-    * [.getVariation()](#Item+getVariation) ⇒ <code>string</code>
     * [.getPriceData()](#Item+getPriceData) ⇒ [<code>Array.&lt;PriceData&gt;</code>](#PriceData)
     * [.getPriceDataByLeague(league)](#Item+getPriceDataByLeague) ⇒ [<code>PriceData</code>](#PriceData)
     * [.getId()](#ItemData+getId) ⇒ <code>number</code>
@@ -294,18 +293,11 @@ Returns a sparkline, optionally only of the last `count` entries (days) in an ar
     * [.isCorrupted()](#ItemData+isCorrupted) ⇒ <code>string</code>
     * [.getLinks()](#ItemData+getLinks) ⇒ <code>number</code>
     * [.getItemLevel()](#ItemData+getItemLevel) ⇒ <code>number</code>
+    * [.getVariation()](#ItemData+getVariation) ⇒ <code>string</code>
     * [.getIcon()](#ItemData+getIcon) ⇒ <code>string</code>
     * [.getCategory()](#ItemData+getCategory) ⇒ <code>string</code>
     * [.getGroup()](#ItemData+getGroup) ⇒ <code>string</code>
 
-<a name="Item+getVariation"></a>
-
-### item.getVariation() ⇒ <code>string</code>
-Returns the variation of the item
-
-**Kind**: instance method of [<code>Item</code>](#Item)  
-**Overrides**: [<code>getVariation</code>](#ItemData+getVariation)  
-**Returns**: <code>string</code> - Variation of the item  
 <a name="Item+getPriceData"></a>
 
 ### item.getPriceData() ⇒ [<code>Array.&lt;PriceData&gt;</code>](#PriceData)
@@ -383,6 +375,12 @@ Returns the links of the item
 
 ### item.getItemLevel() ⇒ <code>number</code>
 Returns the item level of the item
+
+**Kind**: instance method of [<code>Item</code>](#Item)  
+<a name="ItemData+getVariation"></a>
+
+### item.getVariation() ⇒ <code>string</code>
+Returns the variation of the item
 
 **Kind**: instance method of [<code>Item</code>](#Item)  
 <a name="ItemData+getIcon"></a>

@@ -7,6 +7,9 @@ class PriceData {
   */
   constructor(data) {
     Object.assign(this, data);
+
+    this.league = new League(this.league);
+    this.history = new History(this.history);
   }
 
   /**
@@ -15,7 +18,7 @@ class PriceData {
   * @returns {League}
   */
   getLeague() {
-    return new League(this.league);
+    return this.league;
   }
 
   /**
@@ -96,7 +99,7 @@ class PriceData {
   * @returns {History}
   */
   getHistory() {
-    return new History(this.history);
+    return this.league;
   }
 }
 

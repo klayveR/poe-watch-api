@@ -102,7 +102,7 @@ class ItemData {
   * @returns {string}
   */
   getVariation() {
-    return this.var;
+    return this.variation;
   }
 
   /**

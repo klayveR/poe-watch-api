@@ -16,15 +16,6 @@ class Item extends ItemData {
   }
 
   /**
-  * Returns the variation of the item
-  *
-  * @returns {string} Variation of the item
-  */
-  getVariation() {
-    return this.variation;
-  }
-
-  /**
   * Returns price data for every league
   *
   * @returns {PriceData[]} Array of PriceData objects for each league holding the price data for the item
